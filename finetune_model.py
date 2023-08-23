@@ -16,6 +16,6 @@ model = Word2Vec(
 )
 
 # Save the third round of fine-tuned model
-model.save("word2vec.model")
+model.save("finetunedV1.model")
 
 

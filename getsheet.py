@@ -9,7 +9,7 @@ flat_skills_list = list(chain.from_iterable(skills_list))
 
 random_skills = random.sample(flat_skills_list, 50)
 
-model = Word2Vec.load('word2vec.model')
+model = Word2Vec.load('finetunedV1.model')
 
 for skill in random_skills:
 
@@ -19,5 +19,5 @@ for skill in random_skills:
 
     similar_skills_dict[skill] = similar_skills
 
-print(similar_skills_dict)
+# print(similar_skills_dict)
 

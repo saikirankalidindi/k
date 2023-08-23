@@ -22,7 +22,7 @@ for skills_ in documents_with_skills:
     skills_list.append(dict(skills_)['skills'])
 
 print('Mongogb >>> skills_list')
-print(skills_list)
+# print(skills_list)
 
 
 
