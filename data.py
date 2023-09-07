@@ -13,15 +13,13 @@ collection = db[collection_name]
 # Find documents with non-empty "skills" arrays
 documents_with_skills = collection.aggregate([{'$match': {'resume.professionalQualification.skills': { '$exists': 'true', '$ne': [] }}},{'$project': {'_id': 0,'skills': {'$cond': {'if': {'$and': [{ '$isArray': '$resume.professionalQualification.skills.text' },{ '$ne': ['$resume.professionalQualification.skills.text', []] }]},'then': {'$map': {'input': '$resume.professionalQualification.skills.text','as': 'skill','in': { '$toLower': '$$skill' }}},'else': []}}}}])
 
-
 # Initialize a list to store skills
 skills_list = []
-
 for skills_ in documents_with_skills:
 
     skills_list.append(dict(skills_)['skills'])
 
-print('Mongogb >>> skills_list')
+print('Mongodb >>> skills_list')
 # print(skills_list)
 
 
