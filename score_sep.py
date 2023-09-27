@@ -4,7 +4,7 @@ from allskills import flat_skills_list
 
 similar_skills_dict = {}
 
-model = Word2Vec.load('word2vec2.model')
+model = Word2Vec.load('jobs.model')
 
 for pos, skill in enumerate(flat_skills_list):
     sim_skills = model.wv.most_similar(skill, topn=10)

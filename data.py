@@ -1,6 +1,6 @@
 from pymongo import MongoClient
-
-# MongoDB connection information
+from pprint import pprint
+# MongoDB's connection information
 mongodb_url = "mongodb://appanalystdu:jacetHipw!lsO*wabs1cNodvuc@192.168.1.107:27027/"
 database_name = "resumes"
 collection_name = "coarthatechnosolutionsIN"
@@ -19,8 +19,11 @@ for skills_ in documents_with_skills:
 
     skills_list.append(dict(skills_)['skills'])
 
-print('Mongodb >>> skills_list')
-# print(skills_list)
+import json
 
+with open('skills.json', 'w') as file:
+    json.dump(skills_list, file)
+
+print('data')
 
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/word2vec-similarskills.iml" filepath="$PROJECT_DIR$/.idea/word2vec-similarskills.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/word2vec_similarskills.iml" filepath="$PROJECT_DIR$/.idea/word2vec_similarskills.iml" />
     </modules>
   </component>
 </project>
